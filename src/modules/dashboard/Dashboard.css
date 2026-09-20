@@ -1,0 +1,71 @@
+.dashboard-module {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive CSS Grid with auto-fit & minmax */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.quick-actions-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid #2e2e38;
+  padding: 1.25rem;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-card:hover {
+  background-color: #23232c;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  font-size: 1.75rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.action-text h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.action-text p {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}

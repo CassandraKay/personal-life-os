@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from './components/layout/Sidebar';
-import TaskManager from './modules/productivity/TaskManager'; // 1. Import module
+import TaskManager from './modules/productivity/TaskManager';
+import Dashboard from './modules/dashboard/Dashboard'; // 1. Import Dashboard
 import './App.css';
 
 function App() {
@@ -9,14 +10,9 @@ function App() {
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard':
-        return (
-          <section className="tab-content">
-            <h1>Dashboard Overview</h1>
-            <p>Welcome to your Personal Life OS. Here is your daily summary.</p>
-          </section>
-        );
+        return <Dashboard setActiveTab={setActiveTab} />; // 2. Pass setActiveTab prop
       case 'tasks':
-        return <TaskManager />; // 2. Render interactive component!
+        return <TaskManager />;
       case 'notes':
         return (
           <section className="tab-content">
