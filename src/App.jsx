@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Sidebar from './components/layout/Sidebar';
 import TaskManager from './modules/productivity/TaskManager';
-import Dashboard from './modules/dashboard/Dashboard'; // 1. Import Dashboard
+import Dashboard from './modules/dashboard/Dashboard';
+import SpatialCanvas from './modules/canvas/SpatialCanvas'; // Import Canvas Module
 import './App.css';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <Dashboard setActiveTab={setActiveTab} />; // 2. Pass setActiveTab prop
+        return <Dashboard setActiveTab={setActiveTab} />;
       case 'tasks':
         return <TaskManager />;
       case 'notes':
@@ -21,12 +22,7 @@ function App() {
           </section>
         );
       case 'canvas':
-        return (
-          <section className="tab-content">
-            <h1>Workspace Canvas</h1>
-            <p>Visual planning board and creative space.</p>
-          </section>
-        );
+        return <SpatialCanvas />; // Render Spatial Canvas Module
       default:
         return <div>Select a view</div>;
     }

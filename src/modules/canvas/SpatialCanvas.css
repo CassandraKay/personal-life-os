@@ -1,0 +1,98 @@
+/* Container to ensure tldraw fills the workspace area */
+.tldraw-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2e2e38;
+}
+
+/* Custom Card Outer Box */
+.spatial-custom-card {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-secondary, #1e1e24);
+  border: 1px solid #3f3f4e;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  user-select: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-badge {
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #ffffff);
+  margin: 0;
+}
+
+.card-content {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #a1a1aa);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Floating toolbar overlaid on top of tldraw canvas */
+.canvas-custom-toolbar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 500; /* Keeps button above tldraw canvas UI elements */
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Styled primary action button */
+.add-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #6366f1;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+  transition: all 0.2s ease;
+}
+
+.add-card-btn:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.45);
+}
+
+.add-card-btn:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
